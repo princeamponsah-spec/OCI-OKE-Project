@@ -33,19 +33,3 @@ output "oke_node_pool_id" {
   description = "OKE node pool OCID"
   value       = oci_containerengine_node_pool.node_pool.id
 }
-
-
-
-# # outputs.tf
-
-# output "debug_node_shape" {
-#   value = var.node_shape
-# }
-
-# output "debug_images_found" {
-#   value = length(data.oci_core_images.all_ol8_images.images)
-# }
-
-# output "debug_first_image" {
-#   value = length(data.oci_core_images.all_ol8_images.images) > 0 ? data.oci_core_images.all_ol8_images.images[0].display_name : "No images found"
-# }
