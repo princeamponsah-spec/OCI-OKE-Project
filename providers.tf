@@ -1,8 +1,8 @@
 provider "oci" {
-  tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaatxtnrgi5akiqi6ywxsobrews24knrqapn6k6x6vzyfv2in3yyrua"
-  user_ocid        = "ocid1.user.oc1..aaaaaaaaekysfju4q6uxc3x4uxk4vvicgsgdp5okz3ix2musjsv4e35iwe4a"
-  fingerprint      = "9e:97:b3:f4:2a:45:c0:17:5b:fb:22:e1:db:4d:97:17"
-  private_key_path = "/Users/prince/.oci/oci_terraform_key_unencrypted.pem"
+  tenancy_ocid     = ""
+  user_ocid        = ""
+  fingerprint      = ""
+  private_key_path = ""
   region           = "uk-london-1"
 }
 
@@ -10,13 +10,13 @@ provider "oci" {
 terraform {
   required_version = ">= 1.3.0"
   backend "oci" {
-    bucket           = "bucket-kowri-1305"
-    namespace        = "lr7o4f7vwvt0"
-    region           = "uk-london-1"                                                                     # or hardcode like "us-ashburn-1"
-    tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaatxtnrgi5akiqi6ywxsobrews24knrqapn6k6x6vzyfv2in3yyrua" # optional, but recommended
-    user_ocid        = "ocid1.user.oc1..aaaaaaaaekysfju4q6uxc3x4uxk4vvicgsgdp5okz3ix2musjsv4e35iwe4a"    # optional
-    fingerprint      = "9e:97:b3:f4:2a:45:c0:17:5b:fb:22:e1:db:4d:97:17"                                 # optional
-    private_key_path = "/Users/prince/.oci/oci_terraform_key_unencrypted.pem"                            # optional
+    bucket           = "" # State bucket for terraform state
+    namespace        = ""
+    region           = "uk-london-1" # or hardcode like "us-ashburn-1"
+    tenancy_ocid     = ""            # optional, but recommended
+    user_ocid        = ""            # optional
+    fingerprint      = ""            # optional
+    private_key_path = ""            # optional
     key              = "terraform.tfstate"
   }
 }

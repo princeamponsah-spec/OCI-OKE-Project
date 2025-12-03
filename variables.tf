@@ -6,13 +6,13 @@ terraform {
 variable "compartment_ocid" {
   description = "OCID of the compartment where resources will be created"
   type        = string
-  default     = "ocid1.tenancy.oc1..aaaaaaaatxtnrgi5akiqi6ywxsobrews24knrqapn6k6x6vzyfv2in3yyrua"
+  default     = ""
 }
 
 variable "tenancy_ocid" {
   description = "OCID of the tenancy (optional, sometimes useful)"
   type        = string
-  default     = "ocid1.tenancy.oc1..aaaaaaaatxtnrgi5akiqi6ywxsobrews24knrqapn6k6x6vzyfv2in3yyrua"
+  default     = ""
 }
 
 variable "region" {
@@ -54,7 +54,7 @@ variable "bastion_subnet_cidr" {
 variable "availability_domain" {
   description = "Availability Domain to place resources in (optional)"
   type        = string
-  default     = "MDXt:UK-LONDON-1-AD-1"
+  default     = ""
 }
 
 variable "kubernetes_version" {
@@ -78,7 +78,7 @@ variable "node_shape" {
 variable "node_image_id" {
   description = "OCID of the image to use for node pool instances (required)"
   type        = string
-  default     = "ocid1.image.oc1.uk-london-1.aaaaaaaa7rzcdyvxcvam45xcr7wk5niy4m6lcdlqdevo2hjdmpwjgvoprtlq"
+  default     = ""
 }
 
 variable "node_image_name" {
@@ -110,7 +110,7 @@ variable "tags" {
 variable "fingerprint" {
   description = "user key finger print"
   type        = string
-  default     = "96:05:11:7b:20:24:d4:8b:3d:24:94:5e:69:1a:c2:25"
+  default     = ""
 }
 variable "private_key_path" {
   description = "Source routet to private ssh key"
